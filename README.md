@@ -13,11 +13,11 @@
 
 ```bash
 # CLI
-npx github:rothemsys/skill-advisor find "merge two PDFs"
+npx github:under71/skill-advisor find "merge two PDFs"
 
 # Claude Code plugin (adds the skill so Claude answers "which skill should I use?")
-/plugin marketplace add rothemsys/skill-advisor
-/plugin install skill-advisor@rothemsys
+/plugin marketplace add under71/skill-advisor
+/plugin install skill-advisor@under71
 
 # Any other agent: copy the self-contained skill folder
 cp -r skills/skill-advisor ~/.codex/skills/        # or ~/.hermes/skills/, ~/.agents/skills/ ...

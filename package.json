@@ -7,7 +7,7 @@
   "files": ["bin", "skills", ".claude-plugin", "README.md", "README.ko.md", "LICENSE"],
   "engines": { "node": ">=18" },
   "scripts": { "test": "node --test test/*.test.mjs" },
-  "repository": { "type": "git", "url": "git+https://github.com/rothemsys/skill-advisor.git" },
+  "repository": { "type": "git", "url": "git+https://github.com/under71/skill-advisor.git" },
   "keywords": ["agent-skills", "claude-code", "skills", "skill-router", "codex", "hermes", "openclaw", "korean"],
   "author": "Rothem System",
   "license": "MIT"

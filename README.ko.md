@@ -13,11 +13,11 @@
 
 ```bash
 # 바로 실행
-npx github:rothemsys/skill-advisor find "PDF 두 개 합치기"
+npx github:under71/skill-advisor find "PDF 두 개 합치기"
 
 # Claude Code 플러그인 (Claude에게 "어떤 스킬 써?"라고 물으면 이 스킬이 답함)
-/plugin marketplace add rothemsys/skill-advisor
-/plugin install skill-advisor@rothemsys
+/plugin marketplace add under71/skill-advisor
+/plugin install skill-advisor@under71
 
 # 다른 에이전트: 스킬 폴더만 복사 (폴더 하나로 완결)
 cp -r skills/skill-advisor ~/.codex/skills/        # 또는 ~/.hermes/skills/, ~/.agents/skills/ ...
