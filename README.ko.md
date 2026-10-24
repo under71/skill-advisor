@@ -35,6 +35,8 @@ skill-advisor scan --root ~/work/skills:Team   # 다시 조사 + 폴더 추가
 
 `--json`은 스크립트용, `--lang ko|en`으로 언어를 고정합니다. 목록은 `~/.skill-advisor/`에 저장되고(읽기 좋은 `catalog.md` 포함) 7일이 지나면 자동으로 다시 만듭니다.
 
+**설치부터 실전 예시까지 자세한 가이드: [docs/GUIDE.ko.md](docs/GUIDE.ko.md)**
+
 ## 에이전트는 스킬을 어떻게 고르나
 
 Claude Code, Hermes 등은 모두 같은 방식(단계적 로딩)입니다.

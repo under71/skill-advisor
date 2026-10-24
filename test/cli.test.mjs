@@ -13,7 +13,7 @@ const run = (...args) => JSON.parse(execFileSync('node', [path.join(root, 'bin/s
 
 test('scan finds skills across agents', () => {
   const r = run('scan');
-  assert.equal(r.count, 6);
+  assert.equal(r.count, 6); // .archive is skipped
   assert.deepEqual([...new Set(r.roots.map(x => x.agent))].sort(), ['Claude Code', 'Codex', 'Hermes']);
 });
 

@@ -35,17 +35,19 @@ skill-advisor scan --root ~/work/skills:Team  # rebuild catalog, add a custom fo
 
 `--json` for scripts, `--lang ko|en` to force the language. The catalog is cached in `~/.skill-advisor/` (also a readable `catalog.md`) and rebuilt automatically after 7 days.
 
-Example on a real machine with 465 skills:
+Example on a real machine with 385 skills:
 
 ```
 $ skill-advisor doctor
-[WARN] name-conflict (18)   "docx" exists 5 times with DIFFERENT descriptions
-[WARN] overlap (36)         "diagram-import-drawio" and "diagram-import-mermaid" are 75% similar
-[WARN] too-many (3)         Hermes: 251 skills. Past ~50, some may be silently left out
-[WARN] short-description (6)
-[INFO] copies (42)
+[WARN] name-conflict (12)   "docx" exists 5 times with DIFFERENT descriptions
+[WARN] overlap (35)         "diagram-import-drawio" and "diagram-import-mermaid" are 75% similar
+[WARN] too-many (3)         Hermes: 171 skills. Past ~50, some may be silently left out
+[WARN] short-description (5)
+[INFO] copies (46)
 [INFO] stale-cache (4)      plugin ui-ux-pro-max: 1 old cached version (21.0 MB)
 ```
+
+**Full guide with examples:** [docs/GUIDE.md](docs/GUIDE.md) · [한국어 가이드](docs/GUIDE.ko.md)
 
 ## How agents actually pick a skill
 

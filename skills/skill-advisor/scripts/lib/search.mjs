@@ -22,7 +22,7 @@ export function tokenize(s = '') {
   return s.toLowerCase().normalize('NFC').split(/[^\p{L}\p{N}+#.-]+/u).map(t => t.replace(/^[.-]+|[.-]+$/g, '')).filter(t => t.length >= 2);
 }
 // Tiny English stemmer: tests->test, writing->writ, deployed->deploy
-export const stem = t => (HANGUL.test(t) || t.length < 5) ? t : t.replace(/(ies)$/, 'y').replace(/(ing|ed|es|s)$/, '');
+export const stem = t => (HANGUL.test(t) || t.length < 5) ? t : t.replace(/(ies)$/, 'y').replace(/(ing|ed|es|s|e)$/, '');
 const bigrams = t => { const o = []; for (let i = 0; i < t.length - 1; i++) o.push(t.slice(i, i + 2)); return o; };
 
 export function expandQuery(q) {

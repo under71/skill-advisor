@@ -37,7 +37,7 @@ export function parseSkill(file) {
 
 // Trigger phrases: quoted examples inside the description ("...", '...', “...”, 「...」).
 export function triggerPhrases(desc = '') {
-  const re = /["“「『']([^"”」』']{2,40})["”」』']/g;
+  const re = /["“「『‘]([^"”」』’\n]{2,40})["”」』’]/g;
   const out = new Set(); let m;
   while ((m = re.exec(desc))) out.add(m[1].trim());
   return [...out];

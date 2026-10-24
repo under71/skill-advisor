@@ -46,6 +46,7 @@ export function parseRoot(spec) {
 }
 
 // Find SKILL.md files under a root, skipping caches and vendored copies.
+const HIDDEN_SKIP = /^\.(archive|archived|trash|disabled|backup|bak|cache|old|curator_backups)$/i;
 const SKIP = new Set(['node_modules', '.git', '.trash', 'dist', 'build', '__pycache__']);
 export function findSkillFiles(root, maxDepth = 6) {
   const out = [];
@@ -53,7 +54,7 @@ export function findSkillFiles(root, maxDepth = 6) {
     if (depth > maxDepth) return;
     let ents; try { ents = fs.readdirSync(d, { withFileTypes: true }); } catch { return; }
     for (const e of ents) {
-      if (SKIP.has(e.name) || e.name.startsWith('temp_git_')) continue;
+      if (SKIP.has(e.name) || e.name.startsWith('temp_git_') || HIDDEN_SKIP.test(e.name)) continue; // archived/disabled copies
       const p = path.join(d, e.name);
       if (e.name === 'SKILL.md') { out.push(p); continue; }
       if ((e.isDirectory() || e.isSymbolicLink()) && isDir(p)) walk(p, depth + 1);
