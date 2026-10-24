@@ -1,0 +1,14 @@
+{
+  "name": "skill-advisor",
+  "version": "0.1.0",
+  "description": "Inventory, recommend and diagnose installed agent skills (SKILL.md) across Claude Code, Codex, Cursor, Hermes, OpenClaw and more. Korean + English.",
+  "type": "module",
+  "bin": { "skill-advisor": "bin/skill-advisor.mjs" },
+  "files": ["bin", "skills", ".claude-plugin", "README.md", "README.ko.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "repository": { "type": "git", "url": "git+https://github.com/rothemsys/skill-advisor.git" },
+  "keywords": ["agent-skills", "claude-code", "skills", "skill-router", "codex", "hermes", "openclaw", "korean"],
+  "author": "Rothem System",
+  "license": "MIT"
+}

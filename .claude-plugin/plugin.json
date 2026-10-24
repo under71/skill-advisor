@@ -1,0 +1,10 @@
+{
+  "name": "skill-advisor",
+  "version": "0.1.0",
+  "description": "Inventory, recommend and diagnose installed agent skills across Claude Code, Codex, Cursor, Hermes, OpenClaw and more. Korean + English.",
+  "author": { "name": "Rothem System", "url": "https://github.com/rothemsys" },
+  "homepage": "https://github.com/rothemsys/skill-advisor",
+  "repository": "https://github.com/rothemsys/skill-advisor",
+  "license": "MIT",
+  "keywords": ["skills", "agent-skills", "claude-code", "skill-router", "korean"]
+}

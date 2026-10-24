@@ -1,0 +1,7 @@
+{
+  "name": "rothemsys",
+  "owner": { "name": "Rothem System", "url": "https://github.com/rothemsys" },
+  "plugins": [
+    { "name": "skill-advisor", "source": "./", "description": "Which skill should I use? Inventory, recommend and diagnose installed agent skills." }
+  ]
+}
