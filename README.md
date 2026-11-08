@@ -1,5 +1,7 @@
 # skill-advisor
 
+[![test](https://github.com/under71/skill-advisor/actions/workflows/test.yml/badge.svg)](https://github.com/under71/skill-advisor/actions/workflows/test.yml)
+
 **Which skill should I use?** You installed dozens (or hundreds) of agent skills and no longer know which one fires when. `skill-advisor` inventories every `SKILL.md` on your machine, recommends the right one for a task, explains when a skill is triggered, and finds the duplicates and look-alikes that make agents pick the wrong one.
 
 [한국어 README](README.ko.md)
@@ -33,7 +35,7 @@ skill-advisor list --agent hermes             # inventory
 skill-advisor scan --root ~/work/skills:Team  # rebuild catalog, add a custom folder
 ```
 
-`--json` for scripts, `--lang ko|en` to force the language. The catalog is cached in `~/.skill-advisor/` (also a readable `catalog.md`) and rebuilt automatically after 7 days.
+`--json` for scripts, `--lang ko|en` to force the language, `version` to print the version. The catalog is cached in `~/.skill-advisor/` (also a readable `catalog.md`) and rebuilt automatically after 7 days.
 
 Example on a real machine with 385 skills:
 

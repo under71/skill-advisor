@@ -41,3 +41,8 @@ test('doctor flags copies, overlap and vague descriptions', () => {
   const r = run('doctor');
   assert.ok(!r.some(f => f.code === 'overlap' && f.skills.some(s => s.invocable === 'tdd')));
 });
+
+test('version prints a semver', () => {
+  const v = execFileSync('node', [path.join(root, 'bin/skill-advisor.mjs'), 'version'], { encoding: 'utf8' }).trim();
+  assert.match(v, /^\d+\.\d+\.\d+$/);
+});

@@ -15,13 +15,16 @@ for (let i = 0; i < argv.length; i++) {
 }
 const KO = (flags.lang || process.env.LANG || '').startsWith('ko');
 const t = (ko, en) => (KO ? ko : en);
-const cmd = pos.shift() || 'help';
+const cmd = pos.shift() || (flags.version ? 'version' : 'help');
+const VERSION = '0.1.2';
 const clip = (s, n) => { s = (s || '').replace(/\s+/g, ' '); return s.length > n ? s.slice(0, n - 1) + '…' : s; };
 const filt = skills => skills.filter(s => !flags.agent || s.agent.toLowerCase().includes(String(flags.agent).toLowerCase()));
 const out = x => console.log(JSON.stringify(x, null, 2));
 const getCat = () => loadCatalog({ refresh: !!flags.refresh });
 
-if (cmd === 'scan') {
+if (cmd === 'version' || cmd === '--version') {
+  console.log(VERSION);
+} else if (cmd === 'scan') {
   const roots = defaultRoots();
   if (flags.root) roots.push(parseRoot(flags.root));
   const cat = buildCatalog(roots); saveCatalog(cat);

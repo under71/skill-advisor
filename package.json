@@ -1,6 +1,6 @@
 {
   "name": "skill-advisor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Inventory, recommend and diagnose installed agent skills (SKILL.md) across Claude Code, Codex, Cursor, Hermes, OpenClaw and more. Korean + English.",
   "type": "module",
   "bin": { "skill-advisor": "bin/skill-advisor.mjs" },
